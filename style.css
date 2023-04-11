@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+}
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width: 390px) {
+    .container {
+        display: grid;
+        grid-template: calc(100vh / 6) calc(100vh / 6) calc(100vh / 6) calc(100vh / 6) calc(100vh / 6) calc(100vh / 6) / 1fr;
+        grid-template-areas: 
+            "A A A"
+            "B B B"
+            "C C C"
+            "D D D"
+            "E E E"
+            "F F F"
+
+        ;
+    }
+  }
+
+@media screen and (min-width: 768px) {
+    .container {
+        display: grid;
+        grid-template: calc(100vh / 4) calc(100vh / 4) calc(100vh / 4) calc(100vh / 4)  / 1fr 1fr;
+        grid-template-areas: 
+            "A A"
+            "B B"
+            "C D"
+            "E F"
+        ;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template: 100px calc(100vh - 300px) 100px 100px / 1fr 1fr 1fr;
+        grid-template-areas: 
+            "A A A"
+            "B C D"
+            "E E E"
+            "F F F"
+        ;
+    }
+  }
+
+.box1 {
+    background-color: aqua;
+    grid-area: A;
+}
+.box2 {
+    background-color: red;
+    grid-area: B;
+}
+.box3 {
+    background-color: lime;
+    grid-area: C;
+}
+.box4 {
+    background-color: yellow;
+    grid-area: D;
+}
+.box5 {
+    background-color: grey;
+    grid-area: E;
+}
+.box6 {
+    background-color: tomato;
+    grid-area: F;
+}
